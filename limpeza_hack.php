@@ -1,8 +1,8 @@
 <?php 
-    error_reporting(0);
-  header('Content-Type: text/html; charset=utf-8');
-	/**
+  	/**
 	 * Script para retirar código indesejado.
+	 * @author Felipe Barth - fibbarth@gmail.com 
+	 * 07/06/2013
 	 */
 	define('DS', DIRECTORY_SEPARATOR);
 	
@@ -68,6 +68,12 @@
 		return false;   		
    }
    
+   /**
+    * Função responsável por verificar nome do arquivo
+    * onde caso se encaixe no padrão de arquivos suspeitos
+    * irão ser deslocados para uma pasta chamada files_infected
+    * para que seja verificado se podem realmente ser deletados
+    */
    function moveFiles( $file ){
    		global $diretorio;
    		$infect = $diretorio.DS.'files_infected';
