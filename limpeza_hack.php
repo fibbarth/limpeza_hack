@@ -6,7 +6,8 @@
 	 */
 	define('DS', DIRECTORY_SEPARATOR);
 	
-	$diretorio = 'unilinguas_lupus';
+	// Diretório que deseja ser realizado a limpeza
+	$diretorio = 'diretorio_exemplo';
 	
 	$log = recursivo( $diretorio );
 	var_dump( '<pre>', $log );
